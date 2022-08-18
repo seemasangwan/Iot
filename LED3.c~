@@ -1,0 +1,17 @@
+#include<mega8.h>
+#include<delay.h>
+void main()
+{   
+PORTC=0B00000000;
+DDRC=0B00001001;
+PORTD=0B00001001;
+DDRD=0B00000000;
+while(1)
+{
+if(PIND.0==0)
+{PORTC.0=1;}
+if(PIND.3==0)
+{
+PORTC.3=1;}
+}
+}
